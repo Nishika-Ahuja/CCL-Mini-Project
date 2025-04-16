@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: auth4
+  template:
+    metadata:
+      labels:
+        app: auth4
+    spec:
+      containers:
+      - name: auth4
+        image: auth4:1.0
+        ports:
+        - containerPort: 5000
+       
+
+
+
+
+

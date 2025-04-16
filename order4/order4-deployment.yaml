@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: order4
+  template:
+    metadata:
+      labels:
+        app: order4
+    spec:
+      containers:
+      - name: order4
+        image: order4:1.0
+        ports:
+        - containerPort: 5001

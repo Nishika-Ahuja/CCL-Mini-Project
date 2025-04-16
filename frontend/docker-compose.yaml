@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: frontend:1.0
+    ports:
+      - "8080:80"
+    restart: always
+    networks:
+      - frontnet
+
+networks:
+  frontnet:
